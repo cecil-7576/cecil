@@ -1,0 +1,52 @@
+body {
+    font-size: 20px;
+    line-height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#hero {
+    background-color: green;
+    color: whitesmoke;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+#hero1 {
+    text-align: center;
+    color: blue;
+}
+
+#hero2 {
+    text-align: center;
+}
+
+#hero3 {
+    background-image: linear-gradient(blue, red, pink, white, yellow, orange, black, lime);
+    color: black; 
+    border-radius: 5px; 
+}
+
+#hero4 {
+    background-color: bisque;
+}
+
+a {
+    text-decoration: none;
+    padding-inline: 5px;
+    font-weight: bolder;
+    padding: 7px;
+    color:;
+}
+
+a:hover {
+    color: darkred;
+}
+
+a.active {
+    background-color: green;
+    color: whitesmoke;
+}
+
+
+    
