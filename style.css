@@ -12,7 +12,7 @@ body {
     border-radius: 15px;
 }
 
-#hero1 {
+.hero1 {
     text-align: center;
     color: blue;
 }
@@ -21,7 +21,7 @@ body {
     text-align: center;
 }
 
-#hero3 {
+.hero3 {
     background-image: linear-gradient(blue, red, pink, white, yellow, orange, black, lime);
     color: black; 
     border-radius: 5px; 
@@ -48,6 +48,13 @@ a.active {
     background-color: green;
     color: whitesmoke;
 }
+
+aside {
+    background-color: aqua;
+    dis
+}
+
+
 
 
     
