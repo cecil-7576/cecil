@@ -15,10 +15,13 @@ body {
 .hero1 {
     text-align: center;
     color: blue;
+    height: 100px;
+    overflow: scroll;
 }
 
 #hero2 {
     text-align: center;
+    
 }
 
 .hero3 {
@@ -30,6 +33,7 @@ body {
 #hero4 {
     background-color: bisque;
     border-radius: 5px;
+    
 }
 
 a {
@@ -50,8 +54,7 @@ a.active {
 }
 
 aside {
-    background-color: aqua;
-    dis
+    position: ;
 }
 
 
