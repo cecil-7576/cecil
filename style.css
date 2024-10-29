@@ -25,7 +25,7 @@ body {
 }
 
 .hero3 {
-    background-image: linear-gradient(blue, red, pink, white, yellow, orange, black, lime);
+    
     color: black; 
     border-radius: 5px; 
 }
