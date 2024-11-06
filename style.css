@@ -25,14 +25,19 @@ body {
 }
 
 .hero3 {
-    
+    background-image: linear-gradient(green, blue, yellow, pink, 
+    whitesmoke);
     color: black; 
     border-radius: 5px; 
+    width: 500px;
+    float: right;
+    margin-bottom: 100px;
 }
 
 #hero4 {
     background-color: bisque;
     border-radius: 5px;
+    wi
     
 }
 
