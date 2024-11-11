@@ -3,51 +3,249 @@
 <head>
     <meta charset="UTF-8" />
     <title>Sign In</title>
+    <style>
+        body {
+            background-color: #cdcdc3;
+            margin-left: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        header {
+            background-color: #6da095;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            border: 1px solid white;
+            border-radius: 15px;
+        }
+
+        .forms {
+            background-color: #8dac99;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        input[type=text], [type=tel], [type=password], select {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 20%;
+            background-color: #024744;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+        }   
+        
+        input[type=reset] {
+            width: 20%;
+            background-color: #16446a;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-inline-start: 135px;
+            font-size: 15px;
+        }
+  
+        input[type=submit]:hover {
+            background-color: #9bf272;
+        }
+
+        input[type=reset]:hover {
+        background-color: #181f30;
+        }
+
+        /* The radiobutton */
+        .radiobutton {
+            display: inline;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding-inline-end: 20px;
+            align-content: center;
+        }
+
+        /* Hide the browser's default radio button */
+        .radiobutton input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /* Create a custom radio button */
+        .selected {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #23bfb4;
+            border-radius: 50%;
+            border: solid 1px #ccc;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .radiobutton:hover input ~ .selected {
+            background-color: #a8dce7;
+        }
+
+        /* When the radio button is checked, add a green background */
+        .radiobutton input:checked ~ .selected {
+              background-color: #0e424c;
+        }
+
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .selected:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the indicator (dot/circle) when checked */
+        .radiobutton input:checked ~ .selected:after {
+            display: inline;
+        }
+
+        /* Style the indicator (dot/circle) */
+        .radiobutton .selected:after {
+ 	    top: 9px;
+	    left: 9px;
+	    width: 8px;
+	    height: 8px;
+	    border-radius: 50%;
+	    background: black;
+    }
+
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .container input {
+        position: relative;
+        opacity: 3;
+        cursor: pointer;
+        height: 25px;
+        width: 25px;
+    }
+
+    .checkmark {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: 0;
+        border-radius: 7px;
+        border: 1px solid 0;
+    }
+
+    .container:hover input ~ .checkmark {
+        background-color: #233d34;
+    }
+
+    .container input:checked ~ .checkmark {
+        background-color: #23bfb4;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+
+    </style>
 </head>
 <body>
     <header>
         <h1>Register for Wed Design Course</h1>
     </header>
     <section>
-        <div>
+        <div class="forms">
             <form action="" method="">
                 <label for="First name">Firstname:</label><br>
-                <input type="Firstname" placeholder="Type Your Firstname" required><br>
+                <input type="text" name="Firstname" placeholder="Type Your Firstname" required style="margin: 10px;">
+
+                <br>
+
                 <label for="Lastname">Lastname:</label><br>
-                <input type="Lastname" placeholder="Type Your Lastname" required><br>
-                <label for="Email">Email:</label><br>
-                <input type="Email" placeholder="acbd@yahoo.com" required>
-                <br>
-                <label for="Phone Number">Phone Number</label><br>
-                <input type="Phone Number" placeholder="Your Phone Number" required>
-                <br>
-                <label for="Creat Password">Creat Password</label><br>
-                <input type="Creat Password" placeholder="Your Password" required>
-                <br>
-                <label for="Creat Password">Creat Password</label><br>
-                <input type="Creat Password" placeholder="Your Password" required>
-                <p>Gender:</p>
-                <label for="radiobutton">Male
-                    <input type="radio" text="yesorno">
-                </label>
-                <label for="radiobutton">Female
-                    <input type="radio" text="yesorno">
-                </label>
+                <input type="text" name="Lastname" placeholder="Type Your Lastname" required style="margin: 10px;">
                 
+                <br>
+
+                <label for="Email">Email:</label><br>
+                <input type="text" name="Email" placeholder="acbd@yahoo.com" style="margin: 10px; background-color: transparent">
+
+                <br>
+
+                <label for="Phone Number">Phone Number</label><br>
+                <input type="text" name="Phone Number" placeholder="Your Phone Number" required style="margin: 10px;">
+
+                <br>
+
+                <label for="password">Create Password:</label><br>
+                <input type="password" name="password" id="password" placeholder="Your Password" required style="margin: 10px;">
+
+               <p>Gender:</p>
+
+                 <label class="radiobutton">Male
+                    <input type="radio" name="radio">
+                    <span class="selected"></span>
+                </label>
+                <label class="radiobutton">Female
+                    <input type="radio" name="radio">
+                    <span class="selected"></span>
+                </label>
+                <br> 
                 <p>Which of these do you have&#63 (Check all that apply)</p>
-                <label for="Checkbox">
+                <label class="container">
+                <span class="checkmark">
                     <input type="checkbox"> One<br>
                     <input type="checkbox"> Two<br>
                     <input type="checkbox"> Three<br>
                     <input type="checkbox"> Four<br>
                     <input type="checkbox" checked="checkbox"> All of the above
+                </span>
                 </label>
                 <br>
                 <br>
                 <p>State of Origin: (South-south only)</p>
                 <br>
                 <label for="select">
-                <select>
+                <select style="background-color: #61d0f2;">
                     <option type="select one">Select one...</option>
                     <option type="akwaibom">Akwa Ibom</option>
                     <option type="bayelsa">Bayelsa</option>
@@ -56,6 +254,11 @@
                     <option type="crossriver">Cross River</option>
                 </select>
                 </label>
+                <br>
+                <br>
+                <br>
+                <input type="Submit" value="Submit">&nbsp;&nbsp;&nbsp;
+                <input type="Reset" value="Resit">
             </form>
         </div>
     </section>
