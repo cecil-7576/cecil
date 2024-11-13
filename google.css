@@ -1,0 +1,66 @@
+<style>
+        * {
+            margin: 2px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        
+        body {
+           background-color: white;
+           color: black; 
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        } 
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin-left: 80%;
+            padding: 30px;   
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        
+        }
+
+        a:hover {
+            text-decoration: underline;
+
+        }
+
+
+
+        .logo {
+            padding-left: 33%;
+            padding-top: 10%;
+            background-size: contain;
+            align-content: flex-end;
+            
+        }
+
+        input {
+            width: 48%;
+            height: 0.5rem;
+            margin: 2% 0 10px;
+            padding: 20px;
+            border: 1px solid rgba(225, 223, 223, 10);
+            border-radius: 25px ;
+            background-color: transparent;
+            display: inline;
+            margin-left: 23%;
+            font-size: 16px;
+        } 
+
+        .Images {
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            margin-right: 10px;
+            margin-bottom: 20px;
+    
+
+        }
+</style>
