@@ -28,7 +28,6 @@
 
         a:hover {
             text-decoration: underline;
-
         }
 
 
@@ -39,6 +38,10 @@
             background-size: contain;
             align-content: flex-end;
             
+        }
+
+        .box input {
+            box-shadow: 20px;
         }
 
         input {
@@ -52,6 +55,7 @@
             display: inline;
             margin-left: 23%;
             font-size: 16px;
+            box-shadow: 20px;
         } 
 
         .Images {
