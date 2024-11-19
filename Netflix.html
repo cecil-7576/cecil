@@ -88,14 +88,69 @@
             font-size: larger;
         }
 
-        .input {
-            margin: 20px;
+        .form-group {
+            margin: 20px auto !important; 
             text-align: center;
-            padding: 20px;
         }
 
-        .input::placeholder{
-            font-size: 1.2rem;
+        .input::placeholder {
+            font-size: 1.2rem; /* Adjust the font size as needed */
+        }
+
+        input[type=email]:focus {
+            border: solid 10px aliceblue;
+        }
+
+        input[type=email] {
+            width: 30%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            color: #ccc;
+            border-radius: 100px;
+            resize: vertical;
+            background-color: #282727;
+        }
+            
+        input[type=submit] {
+            background-color: #bb0707;
+            color: white;
+            font-size: 1.5rem;
+            padding: 13px 50px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            border-radius: 100px;
+        }
+
+        input[type=submit]:hover {
+            background-color: #8d0a0a;
+        } 
+
+        .feature {
+            color: aliceblue;
+            font-weight: 900;
+            font-size: 2rem !important;
+            text-align: left;
+            padding-top: 20px;
+            padding-block-end: 50px;
+            margin-inline: 10%;
+        }
+
+        .feature h3 {
+            display: inline-block;
+            font-weight: bold;
+            padding-top: 30px;
+            padding-bottom: 0px;
+            background-image: linear-gradient(to right, #6b068a, #d80b0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            /* Adjust font size for smaller screens */
+            @media (max-width: 768px) {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+        }
+
         }
 
         .grid-container {
@@ -104,6 +159,11 @@
             gap: 20px;
             padding-bottom: 50px;
             margin-inline: 10px;
+
+            /* For screens smaller than or equal to 600px */
+            @media (max-width: 600px) {
+            grid-template-columns: repeat(2, 1fr); /* Two column per row */
+        }
             
         }
 
@@ -114,7 +174,14 @@
             padding: 0%;
             overflow: hidden;
             transition: box-shadow 0.2s ease-in-out;
+
+            /* For screens smaller than or equal to 600px */
+            @media (max-width: 600px) {
+            grid-template-columns: repeat(1, 1fr); /* one column per row */
         }
+
+        }
+
     </style>
 </head>
 <body>
@@ -134,10 +201,10 @@
         </div>
 
     <!---->
-    <form>
-        <div class="input">
-            <input type="email" placeholder="Email address">
-            <input type="submit" value="submit">
+    <form class="floating-form">
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Email address">
+            <input type="submit" value="Get Started">
         </div>
     </form>
 
@@ -180,7 +247,43 @@
             <img src="good.jpeg">
         </div>
 
+        <div class="feature">
+            <h3>Only on Netflix</h3>
+        </div>
+    </div>
 
+    <!--Feature Movies Grid-->
+    <div class="grid-container">
+    
+        <!--single movie item-->
+        <div class="grid-item">
+            <img src="game.jpg">
+        </div>
+
+        <!--single movie item-->
+        <div class="grid-item">
+            <img src="suit.jpeg">
+        </div>
+
+        <!--single movie item-->
+        <div class="grid-item">
+            <img src="john.jpg">
+        </div>
+
+        <!--single movie item-->
+        <div class="grid-item">
+            <img src="james.jpg">
+        </div>
+
+        <!--single movie item-->
+        <div class="grid-item">
+            <img src="workingjpg.jpg">
+        </div>
+
+        <!--single movie item-->
+        <div class="grid-item">
+            <img src="good.jpeg">
+        </div>
 
     </div>
 </body>
