@@ -17,7 +17,7 @@
         }
 
         body {
-            background-image: linear-gradient(#352525, rgb(41,32,32) black);
+            background-image: linear-gradient(black, #352525);
         }
 
         nav {
@@ -26,13 +26,43 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px;
-
         }
+
+        nav li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #sign-in-button {
+            background-color: aliceblue;
+            color: #333;
+            padding: 10px 25px;
+            border-radius: 25px
+        }
+
+        #sign-in-button:hover {
+            border: solid 1px aliceblue;
+            box-shadow: #ccc;
+            transition: ease-in-out;
+        }
+
+        .menu {
+            border: 2px solid white;
+            background-color: aliceblue;
+            padding: 10px;
+            border-radius: 70px;
+            font-size: large;
+        }
+
 
         .header{
             width: 95%;
             min-height: 100%;
-            background-image: url(backnet.jpeg);
+            background-image: url(backnet.jpeg), linear-gradient(rgba(0, 0, 0, 0.699), rgba(66, 4, 4, 0.61));
             color: aliceblue;
             background-blend-mode: overlay;
             background-size: cover;
@@ -40,7 +70,11 @@
             text-align: center;
             padding-top: 200px;
             padding-bottom: 150px;
-            border
+            border:2px solid white;
+            margin-left: 30px;
+            border-top-left-radius: 200px;
+            border-bottom-right-radius: 200px;
+            
         }
 
         .header h1 {
@@ -50,16 +84,36 @@
             margin: 0% auto;
         }
 
+        .header p {
+            font-size: larger;
+        }
+
+        .input {
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .input::placeholder{
+            font-size: 1.2rem;
+        }
+
         .grid-container {
             display: grid;
             grid-template-columns: repeat(6, 1fr); /* 6 equal-width columns*/
             gap: 20px;
+            padding-bottom: 50px;
+            margin-inline: 10px;
             
         }
 
         .grid-item img {
             width: 100%;
             height: 100%;
+            border-radius: 25px;
+            padding: 0%;
+            overflow: hidden;
+            transition: box-shadow 0.2s ease-in-out;
         }
     </style>
 </head>
@@ -67,10 +121,10 @@
     <!--Navigation Bar-->
    <nav>
         <div class="logo">
-            <img src="Net.png" alt="netflix logo" width="150px">
+            <img src="nnet.jpg" alt="netflix logo" width="150px">
         </div>
         <ul class="menu">
-            <li><a href="#">Sign In</a></li>
+            <li><a href="#" id="sign-in-button">Sign In</a></li>
         </ul>
    </nav>
 
@@ -81,8 +135,8 @@
 
     <!---->
     <form>
-        <div>
-            <input type="text" placeholder="Email address">
+        <div class="input">
+            <input type="email" placeholder="Email address">
             <input type="submit" value="submit">
         </div>
     </form>
